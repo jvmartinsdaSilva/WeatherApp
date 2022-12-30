@@ -6,24 +6,27 @@ import Menu from './components/Menu';
 import Message from './components/Message';
 import ShowWeatherNow from './components/ShowWeatherNow';
 import ShowWeatherFuture from './components/ShowWeatherFuture';
+import Loading from './components/Loading';
 
 function App() {
   const [messageTxt, setMessageTxt] = useState('Digite uma cidade para consultar o clima')
   const [weatherNow, setWeatherNow] = useState(null)
   const [weatherFutures, setWeatherFutures] = useState([])
-
+  const [loadingOn, setLoadingOn] = useState(false)
 
 
   const getWeathers = (city) => {
 
     setWeatherNow(null)
     setWeatherFutures([])
+    setMessageTxt('')
+    setLoadingOn(true)
 
 
-
+    setTimeout(() => {
       getWeatherNow(city)
       getWeatherFutures(city)
-
+    }, 400)
 
   }
 
@@ -56,7 +59,8 @@ function App() {
       .catch((err) => console.log('erro' + err))
 
 
-     
+
+    setLoadingOn(false)
   }
 
   const filterData = (data) => {
@@ -83,12 +87,15 @@ function App() {
     <div className="container">
       <h1>WEATHER APP</h1>
       <Menu handleChange={getWeathers} />
+      {loadingOn && (
+        <Loading />
+      )}
       {weatherNow === null ? (
         <Message txt={messageTxt} />
       ) : (
         <ShowWeatherNow infos={weatherNow} />
       )}
-      
+
       <div className='tempFuture'>
         {weatherFutures.length > 0 && (
           weatherFutures.map((weather) => (
