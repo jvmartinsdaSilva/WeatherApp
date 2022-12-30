@@ -16,12 +16,10 @@ function App() {
 
 
   const getWeathers = (city) => {
-
     setWeatherNow(null)
     setWeatherFutures([])
     setMessageTxt('')
     setLoadingOn(true)
-
 
     setTimeout(() => {
       getWeatherNow(city)
@@ -43,7 +41,6 @@ function App() {
           return false
         }
         setWeatherNow(data)
-
       })
       .catch((err) => console.log('erro' + err))
   }
@@ -64,7 +61,7 @@ function App() {
   }
 
   const filterData = (data) => {
-
+    setWeatherFutures([])
     const datas = data.list
     const daysFuture = []
 

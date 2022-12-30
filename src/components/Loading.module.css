@@ -22,7 +22,7 @@
 }
 
 .loadBorder::after {
-    content: 'Loading...';
+    /* content: 'Loading...'; */
     color: #ffffff;
 
 }
