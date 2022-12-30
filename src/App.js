@@ -82,7 +82,6 @@ function App() {
 
 
 
-
   return (
     <div className="container">
       <h1>WEATHER APP</h1>
