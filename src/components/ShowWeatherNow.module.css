@@ -1,0 +1,33 @@
+.infos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+    color: var(--whiteColor);
+}
+
+.infosCity{
+    font-size: 1.3em;
+}
+
+
+.infos p{
+    margin-top: .5em;
+    text-align: center;
+}
+
+.infos p.extra{
+    font-style: italic;
+}
+
+.infos p.temp{
+    font-size: 3em;
+}
+
+p.climate{
+    width: 100%;
+    display: flex;
+    margin-top: .5em;
+    font-size: 1.3em;
+    justify-content: space-between;
+    align-items: center;
+}

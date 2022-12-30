@@ -1,0 +1,7 @@
+.message{
+    margin-top: 1em;
+    text-align: center;
+    width: 100%;
+    color: var(--whiteColor);
+    font-size: 1.5em;
+}

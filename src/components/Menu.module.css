@@ -1,0 +1,28 @@
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5em;
+    width: 100%;
+    border-bottom: 2px solid var(--whiteColor);
+}
+
+
+.menu input{
+    width: 80%;
+    height: 40px;
+    font-size: 1.2em;
+    padding: .5em;
+    border: none;
+    border-radius: 5px;
+    background: var(--whiteColor);
+    margin-bottom: 1.5em;
+}
+
+.menu button{
+    height: 40px;
+    transform: scale(1.5);
+    color: var(--whiteColor);
+    background: none;
+    border: none;
+    cursor: pointer;
+}

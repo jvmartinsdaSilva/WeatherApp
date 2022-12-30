@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
+  margin: 50px auto;
+  width: 90vw;
+  padding: .5em;
+  background: var(--appColor);
+  border-radius: 10px;
+  justify-items: center;
+  align-content: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: aliceblue;
 }
 
-.App-link {
-  color: #61dafb;
+.container h1{
+  color: var(--featuredColor);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.tempFuture{
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: auto;
+}
+
+
+.tempFuture::-webkit-scrollbar{
+  height: 20px;
+  
+}
+
+.tempFuture::-webkit-scrollbar-track{
+ 
+  background: none;
+}
+
+.tempFuture::-webkit-scrollbar-thumb{
+  border: 4px solid var(--appColor);
+  background-color: var(--whiteColor);
+  border-radius: 50px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+      width: 60vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1340px){
+  .tempFuture{
+    justify-content: center;
   }
 }
