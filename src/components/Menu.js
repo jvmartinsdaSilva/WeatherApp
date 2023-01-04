@@ -1,5 +1,6 @@
 import styles from "./Menu.module.css"
 import { useState } from "react"
+import {BiSearchAlt} from 'react-icons/bi'
 
 const Menu = ({handleChange}) => {
     const [city, setCity] = useState('')
@@ -15,7 +16,7 @@ const Menu = ({handleChange}) => {
     return (
         <div className={styles.menu}>
             <input type="text" placeholder="Digite o nome da sua cidade" id="iCity" onChange={(e) => setCity(e.target.value)} />
-            <button onClick={searchCity}>🔍</button>
+            <button onClick={searchCity}><BiSearchAlt /></button>
         </div>
     )
 

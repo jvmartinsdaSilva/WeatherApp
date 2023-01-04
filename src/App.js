@@ -56,7 +56,6 @@ function App() {
       .catch((err) => console.log('erro' + err))
 
 
-
     setLoadingOn(false)
   }
 

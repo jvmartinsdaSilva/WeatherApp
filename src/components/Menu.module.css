@@ -20,9 +20,14 @@
 
 .menu button{
     height: 40px;
-    transform: scale(1.5);
     color: var(--whiteColor);
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 2em;
 }
+
+.menu button:active{
+    transform: scale(1.3);
+}
+
