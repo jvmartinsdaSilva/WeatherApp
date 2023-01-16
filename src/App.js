@@ -47,7 +47,7 @@ function App() {
 
 
   const getWeatherFutures = async (city) => {
-    const key = '5c4aaf4971193222a9059f1f935b1020'
+    const key = 'KEY'
     const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=Metric&appid=${key}&lang=pt_br`
 
     await fetch(url)
